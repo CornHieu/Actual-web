@@ -1,0 +1,13 @@
+#particles-js {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInSlideUp 2s forwards;
+    animation-delay: 1s; /* Delay before the animation starts */
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <title>Homepage</title>
 </head>
 <body>
-    
+    <div id="root"></div>
+      <div id="particles-js"></div>
+      
+
+      <!-- Include particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      setTimeout(() => {
+      particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
+      function(){
+      console.log("particles.json has loaded");
+    });
+  }, 1000);
+    </script>
 </body>
 </html>
