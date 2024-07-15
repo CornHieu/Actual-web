@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    homepage: './src/homepage.js',  // Entry point for the homepage
+    pagination: './src/index.js'    // Entry point for pagination
+  },
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',   // Output filename pattern
   },
   module: {
     rules: [
@@ -13,6 +16,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          // No need for options here since .babelrc is present
         },
       },
     ],
@@ -26,3 +30,5 @@ module.exports = {
     port: 9000,
   },
 };
+
+
