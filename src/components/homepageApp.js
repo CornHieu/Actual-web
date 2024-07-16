@@ -14,8 +14,8 @@ const pathVariants = {
     pathLength: 1, // Fully drawn path
     fill: "rgba(255, 255, 255, 1)", // Solid white fill when path is drawn
     transition: {
-      delay: 2, // Delay before animation starts (in seconds)
-      duration: 3, // Duration of animation (in seconds)
+      delay: 1, // Delay before animation starts (in seconds)
+      duration: 2, // Duration of animation (in seconds)
       ease: "easeInOut", // Easing function for smooth animation
     },
   },
@@ -51,8 +51,8 @@ const arrowVariants = {
 
 const HomepageApp = () => {
   return (
-    <div>
-      <svg
+    <div className="homepageMain">
+      <svg className="svg1"
         width="819"
         height="60"
         viewBox="0 0 819 60"
@@ -202,12 +202,12 @@ const HomepageApp = () => {
           animate="visible"
         />
       </svg>
-      <motion.p 
+      <motion.p className="copyright"
         variants = {textVariants}
         initial = "hidden"
         animate = "visible"
       >&copy Personally created by CornHieu </motion.p>
-      <motion.svg
+      <motion.svg className="down-arrow"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         id="down-arrow"
