@@ -15,13 +15,25 @@
       <!-- Include particles.js library -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script>
-      setTimeout(() => {
-      particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}",
-      function(){
-      console.log("particles.json has loaded");
-    });
-  }, 1000);
+      particlesJS.load("particles-js", "{{ url_for('static', filename='particles.json') }}", function() {
+        console.log("particles.json has loaded");
+        document.getElementById("particles-js").classList.add("fade-in");
+      });
     </script>
+    
     <script src="{{ url_for('static', filename='homepage.bundle.js') }}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Disable automatic scroll restoration by the browser
+            history.scrollRestoration = "manual";
+            
+            // Scroll to the top on beforeunload event
+            $(window).on('beforeunload', function(){
+                $(window).scrollTop(0);
+            });
+        });
+    </script>
 </body>
 </html>
