@@ -39,14 +39,25 @@ const textVariants = {
 
 const arrowVariants = {
   hidden: {
-    scale:0,
+    opacity: 0,
+    scale: 0,
   },
   visible: {
-    scale:1,
-    x:[ 0,10,0],
-    transition: { repeat:Infinity, duration: 1, ease: "easeOut" },
-  }
-
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1, // Duration for opacity transition
+      ease: "easeOut", // Easing function for opacity transition
+    },
+  },
+  animationLoop: {
+    y: [0, 10, 0],
+    transition: {
+      yoyo: Infinity,
+      duration: 1,
+      ease: "easeOut",
+    },
+  },
 };
 
 const HomepageApp = () => {
@@ -206,16 +217,15 @@ const HomepageApp = () => {
         variants = {textVariants}
         initial = "hidden"
         animate = "visible"
-      >&copy Personally created by CornHieu </motion.p>
+      >&copy; Personally created by CornHieu </motion.p>
       <motion.svg className="down-arrow"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        id="down-arrow"
         width="50"
         height="50"
         variants={ arrowVariants }
         initial="hidden"
-        animate="visible"
+        animate={["visible", "animationLoop"]}
       >
         <g>
           <path d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17zm-3.91-7L12 14.82 16 10z" />
