@@ -110,14 +110,15 @@ const AboutMe = () => {
           >
             My motives lie upon the burning spirit of entrepreneurship and my long-standing passion for coding. I believe that technology will be the future and I want to be a part of it by pursuing the startup journey.
           </motion.p>
-          <motion.button 
+          <motion.a 
           className="about-button" 
+          href="/All_posts"
           variants={buttonVariants} 
           initial="hidden" 
           animate="visible"
           whileHover={buttonHoverVariants}>
             Visit my blogs
-          </motion.button>
+          </motion.a>
         </motion.div>
       )}
     </motion.div>
