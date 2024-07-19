@@ -264,19 +264,61 @@ const HomepageApp = () => {
         initial = "hidden"
         animate = "visible"
       >&copy; Personally created by CornHieu </motion.p>
-      <motion.svg className="down-arrow"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        width="50"
-        height="50"
-        variants={ arrowVariants }
-        initial="hidden"
-        animate={["visible", "animationLoop"]}
+      {!arrowState && (
+        <motion.svg
+          className="down-arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="50"
+          height="50"
+          variants={arrowVariants}
+          initial="hidden"
+          animate={["visible", "animationLoop"]}
+        >
+          <g>
+            <path d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17zm-3.91-7L12 14.82 16 10z" />
+          </g>
+        </motion.svg>
+      )}
+      <motion.div
+        className="about"
+        style={{ backgroundColor: smoothBackgroundColor }}
       >
-        <g>
-          <path d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17zm-3.91-7L12 14.82 16 10z" />
-        </g>
-      </motion.svg>
+        <motion.h1
+          className="about-header"
+          variants={aboutHeaderVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {" "}
+          About me{" "}
+        </motion.h1>
+        <motion.p
+          className="about-para"
+          variants={paraVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {" "}
+          I'm Ngo Hieu, a 17-year-old student at Nguyen Tat Thanh High
+          School.I'm often refered as Corn Hieu as a fun nickname and my hobbies
+          are predominantly coding and participating sports like bodybuilding
+          and basketball.{" "}
+        </motion.p>
+        <motion.p
+          className="about-para"
+          variants={paraVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {" "}
+          My motives lies upon the burning spirit of entrepreneurship and my
+          long-standing passion for coding. I believe that technology will be
+          the future and I want to be a part of it by pursuing the startup
+          journey.
+        </motion.p>
+      </motion.div>
+
     </div>
   );
 };
