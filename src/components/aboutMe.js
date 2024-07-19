@@ -44,10 +44,9 @@ const AboutMe = () => {
     damping: 30,
   });
   return (
-    <div>
+    <motion.div className="about-main" style={{ backgroundColor: backgroundColor }}>
       <motion.div
-        className="about"
-        style={{ backgroundColor: backgroundColor }}
+        className="about-box"
       >
         <motion.h1
           className="about-header"
@@ -83,7 +82,7 @@ const AboutMe = () => {
           journey.
         </motion.p>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
