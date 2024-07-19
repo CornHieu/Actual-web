@@ -41,6 +41,16 @@ const buttonVariants = {
     },
   },
 };
+const buttonHoverVariants = {
+  scale: 1.1,
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.3)",
+  transition: {
+    duration: 0.3,
+    yoyo: Infinity,
+  },
+};
+
+
 
 const AboutMe = () => {
   const { scrollYProgress } = useScroll();
@@ -100,7 +110,14 @@ const AboutMe = () => {
           >
             My motives lie upon the burning spirit of entrepreneurship and my long-standing passion for coding. I believe that technology will be the future and I want to be a part of it by pursuing the startup journey.
           </motion.p>
-          
+          <motion.button 
+          className="about-button" 
+          variants={buttonVariants} 
+          initial="hidden" 
+          animate="visible"
+          whileHover={buttonHoverVariants}>
+            Visit my blogs
+          </motion.button>
         </motion.div>
       )}
     </motion.div>

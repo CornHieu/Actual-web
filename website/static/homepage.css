@@ -89,6 +89,21 @@ body {
     color: white;
     line-height: 1.5;
 }
+.about-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+  }
+  
+  .about-button:hover {
+    background-color: #0056b3;
+}
 @keyframes fadeInSlideUp {
     to {
         opacity: 1;
