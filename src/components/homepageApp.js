@@ -1,7 +1,9 @@
 import React from "react";
+import { useState,useEffect } from "react";
 import { motion } from "framer-motion";
 import { easeInOut } from "framer-motion";
 import {easeOut} from "framer-motion"
+import { useScroll, useTransform, useSpring } from 'framer-motion';
 
 const pathVariants = {
   hidden: {
@@ -59,8 +61,52 @@ const arrowVariants = {
     },
   },
 };
+const aboutHeaderVariants = {
+  hidden: {
+    scale: 0,
+  },
+  visible: {
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 50,
+      damping: 10,
+      duration: 0.8,
+    },
+  },
+};
+const paraVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.8, // Delay to start after the about header animation
+      duration: 1,
+    },
+  },
+};
 
 const HomepageApp = () => {
+  const [arrowState, setArrowState] = useState(true);
+  const { scrollYProgress } = useScroll();
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0.5, 1],
+    ["#808080", "#000000"]
+  );
+  const smoothBackgroundColor = useSpring(backgroundColor, {
+    stiffness: 300,
+    damping: 30,
+  });
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.onChange((progress) => {
+      setArrowState(progress > 0); // Hide arrow when scrolling starts
+    });
+    return () => unsubscribe();
+  }, [scrollYProgress]);
+
   return (
     <div className="homepageMain">
       <svg className="svg1"
