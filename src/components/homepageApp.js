@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { easeInOut } from "framer-motion";
 import {easeOut} from "framer-motion"
 import { useScroll, useTransform, useSpring } from 'framer-motion';
+import { renderToPipeableStream } from "react-dom/server";
 
 const pathVariants = {
   hidden: {
@@ -53,9 +54,9 @@ const arrowVariants = {
     },
   },
   animationLoop: {
-    y: [0, 10, 0],
+    y: [0, 20, 0],
     transition: {
-      yoyo: Infinity,
+      repeat: Infinity,
       duration: 1,
       ease: "easeOut",
     },
@@ -89,7 +90,7 @@ const paraVariants = {
 };
 
 const HomepageApp = () => {
-  const [arrowState, setArrowState] = useState(true);
+  const [arrowState, setArrowState] = useState(false);
   const { scrollYProgress } = useScroll();
   const backgroundColor = useTransform(
     scrollYProgress,
@@ -280,44 +281,6 @@ const HomepageApp = () => {
           </g>
         </motion.svg>
       )}
-      <motion.div
-        className="about"
-        style={{ backgroundColor: smoothBackgroundColor }}
-      >
-        <motion.h1
-          className="about-header"
-          variants={aboutHeaderVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {" "}
-          About me{" "}
-        </motion.h1>
-        <motion.p
-          className="about-para"
-          variants={paraVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {" "}
-          I'm Ngo Hieu, a 17-year-old student at Nguyen Tat Thanh High
-          School.I'm often refered as Corn Hieu as a fun nickname and my hobbies
-          are predominantly coding and participating sports like bodybuilding
-          and basketball.{" "}
-        </motion.p>
-        <motion.p
-          className="about-para"
-          variants={paraVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {" "}
-          My motives lies upon the burning spirit of entrepreneurship and my
-          long-standing passion for coding. I believe that technology will be
-          the future and I want to be a part of it by pursuing the startup
-          journey.
-        </motion.p>
-      </motion.div>
 
     </div>
   );

@@ -2,12 +2,13 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    homepage: './src/homepage.js',  // Entry point for the homepage
-    pagination: './src/index.js'    // Entry point for pagination
+    aboutme: './src/aboutme.js',
+    homepage: './src/homepage.js',
+    pagination: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: '[name].bundle.js',   // Output filename pattern
+    filename: '[name].bundle.js'
   },
   module: {
     rules: [
@@ -15,20 +16,17 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          // No need for options here since .babelrc is present
-        },
-      },
-    ],
+          loader: 'babel-loader'
+        }
+      }
+    ]
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   devServer: {
     static: path.join(__dirname, 'static'),
     compress: true,
-    port: 9000,
-  },
+    port: 9000
+  }
 };
-
-
