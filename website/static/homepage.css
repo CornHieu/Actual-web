@@ -99,10 +99,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 15px;
+    text-decoration: none;
   }
   
   .about-button:hover {
     background-color: #0056b3;
+    text-decoration: none;
 }
 @keyframes fadeInSlideUp {
     to {

@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
+    comment: './src/appComment.js',
     aboutme: './src/aboutme.js',
     homepage: './src/homepage.js',
     pagination: './src/index.js'

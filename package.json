@@ -4,6 +4,7 @@
   "description": "flask-react-website",
   "main": "index.js",
   "dependencies": {
+    "firebase": "^10.12.4",
     "framer-motion": "^12.0.0-alpha.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
