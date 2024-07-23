@@ -1,3 +1,4 @@
+
 .comment-form {
     display: flex;
     flex-direction: column; /* Stack elements vertically */
@@ -12,4 +13,43 @@
 }
 .comment-list {
     margin-top:35px;
+}
+.comment-list-title {
+    margin-bottom: 20px;
+}
+  
+.total-comment {
+border-radius: 8px;
+padding: 15px;
+margin-bottom: 15px;
+display: flex;
+align-items: flex-start;
+}
+.comment-image1, .comment-image2 {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 15px;
+object-fit: cover;
+}
+.comment-layout {
+    flex-grow: 1;
+  }
+  
+.comment-name {
+margin: 0 0 5px 0;
+font-size: 16px;
+font-weight: bold;
+}
+
+.comment-timestamp {
+font-size: 12px;
+color: #888;
+margin: 0 0 10px 0;
+}
+
+.comment-content {
+margin: 0;
+font-size: 14px;
+line-height: 1.4;
 }

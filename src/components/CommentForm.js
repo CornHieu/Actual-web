@@ -24,7 +24,7 @@ function CommentForm() {
       await addDoc(collection(db, "comments"), {
         name: name,
         comment: comment,
-        createdAt: new Date(),
+        createdAt: Timestamp.fromDate(new Date()),
       });
       // Clear the input fields after successful submission
       setName("");

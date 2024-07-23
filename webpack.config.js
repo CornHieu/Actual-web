@@ -19,6 +19,19 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      // Add this new rule for image files
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/'
+            }
+          }
+        ]
       }
     ]
   },
@@ -29,5 +42,7 @@ module.exports = {
     static: path.join(__dirname, 'static'),
     compress: true,
     port: 9000
-  }
+  },
+  // Add this to set the mode
+  mode: 'development' // or 'production' for production builds
 };

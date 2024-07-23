@@ -6,6 +6,16 @@ import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 
 // Import the Firestore database instance we set up
 import { db } from "../firebase";
+import img1 from "./comment.jpg";
+import img2 from "./commenter.jpg";
+
+
+const formatTimestamp = (timestamp) => {
+  const date = timestamp.toDate();
+  const options = { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+  return date.toLocaleString('en-GB', options).replace(',', ' AT');
+};
+
 
 // Define the CommentList component
 function CommentList() {
@@ -37,11 +47,24 @@ function CommentList() {
   return (
     <div className="comment-list">
       <h2 className="comment-list-title">Comments</h2>
+      <div key={comment.id} className="total-comment">
+          <img src={img1} alt={comment.name} className="comment-image1" />
+          <div className="comment-layout">
+            <h3 className="comment-name">Hello</h3>
+            <p className="comment-content">Hello</p>
+          </div>
+      </div>
+      <br/>
+
       {/* Map through the comments and render each one */}
       {comments.map((comment) => (
         <div key={comment.id} className="total-comment">
-          <h3 className="comment-name">{comment.name}</h3>
-          <p className="comment-content">{comment.comment}</p>
+          <img src={img2} alt={comment.name} className="comment-image2" />
+          <div className="comment-layout">
+            <h3 className="comment-name">{comment.name}</h3>
+            <p className="comment-timestamp">{formatTimestamp(comment.createdAt)}</p>
+            <p className="comment-content">{comment.comment}</p>
+          </div>
         </div>
       ))}
     </div>
