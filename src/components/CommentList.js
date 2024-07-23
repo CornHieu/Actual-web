@@ -35,13 +35,13 @@ function CommentList() {
 
   // Render the list of comments
   return (
-    <div>
-      <h2>Comments</h2>
+    <div className="comment-list">
+      <h2 className="comment-list-title">Comments</h2>
       {/* Map through the comments and render each one */}
       {comments.map((comment) => (
-        <div key={comment.id}>
-          <h3>{comment.name}</h3>
-          <p>{comment.comment}</p>
+        <div key={comment.id} className="total-comment">
+          <h3 className="comment-name">{comment.name}</h3>
+          <p className="comment-content">{comment.comment}</p>
         </div>
       ))}
     </div>

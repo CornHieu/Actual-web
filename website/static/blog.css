@@ -9,5 +9,7 @@
     width: 100%; /* Make inputs full width */
     padding: 10px; /* Add padding for better appearance */
     box-sizing: border-box; /* Include padding in width */
-
+}
+.comment-list {
+    margin-top:35px;
 }
