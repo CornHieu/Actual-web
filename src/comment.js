@@ -3,19 +3,18 @@ import React from 'react';
 
 
 // Import the CommentForm and CommentList components we created
-import CommentForm from './components/CommentForm';
-import CommentList from './components/CommentList';
+import CommentForm from './components/commentForm';
+import CommentList from './components/commentList';
 
 // Define the main App component
 function App() {
   // Render the app layout
   return (
     <div className="App">
-      <h1>My Comment App</h1>
+      <CommentList />
       {/* Include the CommentForm component */}
       <CommentForm />
-      {/* Include the CommentList component */}
-      <CommentList />
+      
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.comment-form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 10px; /* Space between elements */
+}
+.author-input,
+.comment-input,
+.comment-button {
+    width: 100%; /* Make inputs full width */
+    padding: 10px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding in width */
+
+}

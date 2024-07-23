@@ -60,7 +60,7 @@ function CommentForm() {
         required
       ></textarea>
       {/* Submit button for the form */}
-      <button type="submit">Submit Comment</button>
+      <button className="comment-button" type="submit">Submit Comment</button>
     </form>
   );
 }
