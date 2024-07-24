@@ -1,24 +1,89 @@
-{% extends "base.html" %}
-{% block title %}Changed{% endblock %}
-
-{% block content %}
+{% extends "base.html" %} {% block title %}Changed{% endblock %} {% block
+content %}
 <div class="container fluid">
   <div class="row">
-    <div class="col-3"></div>  
-    <div class="col-6"> 
-        <h1>my career change journey from charity administrator to software development</h1>
-        <p>October 10th 2023</p>
-        <p>I've always loved the digital world whether it's the web, photography or gaming. As a kid, I'd mess around with basic HTML and CSS on blogging sites for hours after school. I never really understood the code but I loved messing with it until I could make the website look "good".</p>
-        <div id="comment">
-            <h3>Comments</h3>
-        </div>
-    </div>        
-    <div class="col-3"></div>
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h1 class="title">
+        How I go about making this website under a month of summer's break.
+      </h1>
+      <p class="date">October 10th 2023</p>
+      <p class="reading-time">2 min read</p>
+      <img
+        src="{{ url_for('static', filename='algo.jpg') }}"
+        alt="img"
+        class="first-img"
+      />
+      <p class="source1">
+        A scene from
+        <a
+          class="link"
+          href="https://www.google.com/search?q=the+social+network&rlz=1C1ONGR_viVN1101VN1101&oq=the+social+network+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQIxgnMgwIAhAAGEMYgAQYigUyDAgDEAAYQxiABBiKBTIHCAQQLhiABDIHCAUQABiABDIGCAYQRRg9MgYIBxBFGDzSAQg0NTk1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8"
+          >The Social NetWork</a
+        >
+      </p>
+      <p class="disclaimer">
+        Disclaimer: This blog is designed to be read by everyone so I am not
+        delving too much into the technical details!
+      </p>
+      <p class="section">1.Introduction</p>
+      <p class="paragraph">
+        After two months of grueling preparation for the SAT and bringing back
+        home a decent result, I was left with like a month or two of summer
+        break with pretty much nothing to do and no idea to use the spare time
+        for the good. But fast forward a month and a half, here i am with a
+        sleeky designed blog that I can be proud of 😎
+      </p>
+      <p class="paragraph">
+        The motivation,initially, sparks from my curiosity regarding all the new
+        techs that have been all-the-rage out there. My ambitious mind was
+        sprawling with bunch of crazy ideas like trying to build an actual
+        <a class="link" href="https://www.salesforce.com/ap/saas/">SaaS</a>
+        product or data monetization from
+        <a
+          class="link"
+          href="https://www.imperva.com/learn/application-security/web-scraping-attack/#:~:text=Web%20scraping%20is%20the%20process,replicate%20entire%20website%20content%20elsewhere."
+          >web scraping</a
+        >. But before touching on those things, I wanted to branch out my skills
+        first by trying out simple stuffs, which is building a blog!
+      </p>
+      <p class="paragraph">
+        It may sounds boring at first but i think this project is generally a
+        good starting point for me. It will be a solid proof for my passion and
+        the springboard for all the exciting upcoming things. I was able to get
+        my hands on the basics of web developement and how the front-end and
+        back-end are interconnected. Not only that, this blog will be the place
+        where I document future projects and updates about my life because I
+        love sharing my personal experiences.
+      </p>
+      <p class="section">
+        2. A little bit of what I have learned along the way
+      </p>
+      <img
+        class="second-img"
+        src="{{ url_for('static', filename='oppenheimer.jpg') }}"
+        alt="img"
+      />
+      <p class="source1">
+        A scene from
+        <a
+          class="link"
+          href="https://www.google.com/search?q=oppenheimer+&sca_esv=2a9720fd994fa302&rlz=1C1ONGR_viVN1101VN1101&sxsrf=ADLYWIKPVfhafrYeZSsMzRu-nNDMEazVvw%3A1721846248348&ei=6EmhZo3-FNSO2roPot6k4Aw&ved=0ahUKEwiNkvaPqcCHAxVUh1YBHSIvCcwQ4dUDCA8&uact=5&oq=oppenheimer+&gs_lp=Egxnd3Mtd2l6LXNlcnAiDG9wcGVuaGVpbWVyIDIKECMYgAQYJxiKBTIEECMYJzIKEC4YgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYFBiHAjIFEAAYgAQyCBAAGIAEGMsBMgUQABiABDIFEAAYgARI4ARQ-gJY-gJwAXgAkAEAmAFZoAFZqgEBMbgBA8gBAPgBAZgCAqACZsICCBAAGIAEGLADwgILEAAYgAQYsAMYogSYAwCIBgGQBgWSBwEyoAfYCg&sclient=gws-wiz-serp"
+          >Oppenheimer</a
+        >
+      </p>
+
+      <p class="paragraph">
+        When it comes to web development, the first things that comes to me and
+        people's mind are html and css. So I taught myself those two via <a class="link" href=""
+      </p>
+
+      <div id="comment">
+        <h3>Comments</h3>
+      </div>
+    </div>
+    <div class="col-2"></div>
   </div>
 </div>
 
-    
-
 {% endblock %}
-
-
