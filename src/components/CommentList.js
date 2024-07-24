@@ -50,8 +50,8 @@ function CommentList() {
       <div key={comment.id} className="total-comment">
           <img src={img1} alt={comment.name} className="comment-image1" />
           <div className="comment-layout">
-            <h3 className="comment-name">Hello</h3>
-            <p className="comment-content">Hello</p>
+            <h3 className="comment-name">Corn Hieu</h3>
+            <p className="comment-content">Quick shout-outs to all those who have commented here!</p>
           </div>
       </div>
       <br/>
