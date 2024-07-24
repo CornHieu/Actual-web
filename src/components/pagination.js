@@ -21,6 +21,7 @@ export default function PaginationComponent() {
   const handleClick = (event, number) => {
     event.preventDefault();
     setCurrentPage(number);
+    window.location.href = `/page/${number}`;
   };
 
   const renderPageNumbers = pages.map((number) => {
@@ -54,6 +55,7 @@ export default function PaginationComponent() {
         setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
         setMinPageNumberLimit(minPageNumberLimit + pageNumberLimit);
       }
+      window.location.href = `/page/${nextPage}`;
     }
   };
 
@@ -62,10 +64,11 @@ export default function PaginationComponent() {
     if (currentPage - 1 >= 1) {
       const prevPage = currentPage - 1;
       setCurrentPage(prevPage);
-      if ((prevPage ) % pageNumberLimit === 0) {
+      if ((prevPage) % pageNumberLimit === 0) {
         setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
         setMinPageNumberLimit(minPageNumberLimit - pageNumberLimit);
       }
+      window.location.href = `/page/${prevPage}`;
     }
   };
 

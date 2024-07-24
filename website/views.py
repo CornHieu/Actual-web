@@ -15,7 +15,10 @@ def blog1():
     return render_template("home.html")
 @views.route('/page/<int:page_num>')
 def posts(page_num):
-    return render_template("All_posts.html",page_num=page_num)
+    if page_num == 1:
+        return render_template("All_posts.html", page_num=page_num)
+    else:
+        return render_template("Others.html", page_num=page_num)
 
     
 

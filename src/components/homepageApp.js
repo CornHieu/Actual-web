@@ -103,7 +103,7 @@ const HomepageApp = () => {
   });
   useEffect(() => {
     const unsubscribe = scrollYProgress.onChange((progress) => {
-      setArrowState(progress > 0); // Hide arrow when scrolling starts
+      setArrowState(progress > 0); 
     });
     return () => unsubscribe();
   }, [scrollYProgress]);
