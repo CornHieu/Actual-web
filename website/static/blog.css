@@ -116,3 +116,10 @@ line-height: 1.4;
     margin-top:30px;
     height: 600px;
 }
+.third-img {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top:30px;
+    height: 600px;
+}
