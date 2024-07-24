@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 
 // Import Firebase functions for adding documents to a collection
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc,Timestamp} from "firebase/firestore";
+
 
 // Import the Firestore database instance we set up
 import { db } from "../firebase";
